@@ -1,0 +1,112 @@
+/* src/Navbar.css */
+
+/* Basic Navbar styling */
+.navbar {
+    background-color: #d6d0c7; /* OLX brand color */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-top: -10px;
+    margin-left: -9px;
+    margin-right: -9px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .search1-input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 2px;
+    border:1px solid black;
+    font-size: 16px;
+    outline: none;
+    margin-left: -98px;
+  }
+  .search-input {
+    width: 750px;
+    padding: 10px;
+    border-radius: 2px;
+    border:1px solid black;
+    font-size: 16px;
+    outline: none;
+    margin-left: -50px;
+  }
+  
+  .search-input::placeholder {
+    color: #999;
+  }
+  .cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-right: -110px;
+  }
+ .eng{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #d6d0c7;
+   
+ } 
+ .engs{
+    width: 100px;
+    height: 30px;
+     border: none;
+    background-color: #d6d0c7;
+    font-weight: bold;
+    font-size: 15px;
+ } 
+ .lod{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 8px;
+ }
+ .sell{
+    width: 90px;
+    height: 40px;
+    border-radius: 100px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgb(27, 105, 27);
+
+ }
+ .plu{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 5px;
+ }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .search-bar {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    .navbar-links {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  
+    .sell-btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  
