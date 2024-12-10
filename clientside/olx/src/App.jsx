@@ -1,20 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { useState } from "react"
-import "./App.css"
 import Nav from "./components/Nav"
 
+import Login from "./components/Login"
+import Signup from "./components/Signup"
+
 function App() {
- 
-  return (
-    <>
-      <BrowserRouter>
-         <Nav/>
-        <Routes>
-         
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+  return(
+    <BrowserRouter>
+    <Nav/>
+    <Routes>
+    <Route path="/login" element={<Login />}></Route>
+    <Route path="/signup" element={<Signup />}></Route>
+    </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
