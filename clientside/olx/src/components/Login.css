@@ -25,6 +25,7 @@
     border: 1px solid rgb(212, 210, 210);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     color: #333;
+    margin-top: -140px;
   }
   
   /* Header */
@@ -106,7 +107,7 @@
     width: 350px;
     height: 50px;
     padding: 15px 10px;
-    margin-top: 520px;
+    margin-top: 390px;
     margin-left: -350px;
     background-color: white;
     border: 1px solid rgb(212, 210, 210);
@@ -122,6 +123,7 @@
     margin-top: 200px;
     color: #007bfc;
     font-weight: bold;
+    text-decoration: none;
   }
   .or{
     margin-top: 40px;

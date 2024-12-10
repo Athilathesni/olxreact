@@ -1,16 +1,18 @@
 import React from "react";
 import "./Nav.css";  // Import the CSS for the navbar
+import { Link } from "react-router-dom"
+import pic from '../assets/search.512x512.png'
 
 const Nav = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
       <div className="search1-bar">
-          <input
-            type="text"
-            placeholder=""
-            className="search1-input"
-          />
+           <select className="loca">     
+            <option value="india">INDIA</option>         
+            <option value="usa">USA</option>
+          <option value="uk">UK</option>
+         </select>
         </div>
         <div className="search-bar">
           <input
@@ -18,10 +20,11 @@ const Nav = () => {
             placeholder="Find Cars, Mobiles and more..."
             className="search-input"
           />
+          {/* <div>
+          <img src={pic} alt="" />
+          </div> */}
         </div>
-        <div>
-            <img src="" alt="" />
-        </div>
+        
         <div className="cont">
         <div className="eng">  
         <select className="engs">
@@ -30,7 +33,7 @@ const Nav = () => {
         </select>
         </div>
         <a className="lod" href="/login"> Login</a>
-        <button className="sell"><span className="plu">+</span>SELL</button>
+      <button className="sell"><Link><span className="plu">+</span>SELL</Link></button>
    </div>
        
       </div>

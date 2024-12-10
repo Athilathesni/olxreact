@@ -7,7 +7,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
-    email:"",
+    email:localStorage.getItem('email') ||"",
     pwd: "",
     cpwd: "",
   });
@@ -22,16 +22,15 @@ const Signup = () => {
     console.log(formData);
     
     try {
-      const res = await axios.post("http://localhost:4000/api/adduser", formData);
+      const res=await axios.post("http://localhost:4000/api/adduser",formData)
       if (res.status === 201) {
         alert(res.data.msg);
         localStorage.removeItem("email");
-        navigate("/login");
+        navigate('/login');
       } else {
         alert(res.data.msg);
       }
     } catch (error) {
-      console.error("Error during registration:", error);
     }
  };
 
@@ -43,18 +42,26 @@ const Signup = () => {
       </div>
       <form onSubmit={handleSubmit} method="post">
         <div className="forms-group">
-          {/* <label>Username</label> */}
           <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
-            placeholder="Enter your username"
+            placeholder="Username or Phone"
             required
           />
         </div>
         <div className="forms-group">
-          {/* <label>Password</label> */}
+          <input
+            type="text"
+            name="username"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div className="forms-group">
           <input
             type="password"
             name="pwd"
@@ -65,7 +72,6 @@ const Signup = () => {
           />
         </div>
         <div className="forms-group">
-          {/* <label>Confirm Password</label> */}
           <input
             type="password"
             name="cpwd"

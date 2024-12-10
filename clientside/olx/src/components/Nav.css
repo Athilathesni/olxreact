@@ -2,7 +2,7 @@
 
 /* Basic Navbar styling */
 .navbar {
-    background-color: #d6d0c7; /* OLX brand color */
+    background-color:#e4e6e6; /* OLX brand color */
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -20,20 +20,33 @@
     margin: 0 auto;
   }
   
-  .search1-input {
+  .loca {
     width: 200px;
     padding: 10px;
     border-radius: 2px;
-    border:1px solid black;
+    border:2px solid rgb(12, 12, 12);
     font-size: 16px;
     outline: none;
     margin-left: -98px;
   }
+  img{
+    width: 40px;
+    height: 40px;
+  }
+  /* .img{
+    background-color: black;
+    width: 50px;
+    border-radius: 5px;
+    height: 40px;
+    margin-left: 700px;
+    margin-top: -20px;
+  } */
   .search-input {
     width: 750px;
-    padding: 10px;
+    height: 40px;
+    margin-top: 10px;
     border-radius: 2px;
-    border:1px solid black;
+    border:2px solid rgb(10, 10, 10);
     font-size: 16px;
     outline: none;
     margin-left: -50px;
@@ -52,14 +65,14 @@
     width: 100px;
     height: 30px;
     border: none;
-    background-color: #d6d0c7;
-   
+    background-color:#e4e6e6;
+  
  } 
  .engs{
     width: 100px;
     height: 30px;
      border: none;
-    background-color: #d6d0c7;
+    background-color: #e4e6e6;
     font-weight: bold;
     font-size: 15px;
  } 
@@ -77,7 +90,6 @@
     font-weight: bold;
     text-align: center;
     border: 1px solid rgb(27, 105, 27);
-
  }
  .plu{
     font-size: 20px;
