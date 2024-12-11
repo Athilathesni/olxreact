@@ -1,6 +1,8 @@
-import React from "react";
-import "./Nav.css";  // Import the CSS for the navbar
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from "react-router-dom"
+import './Nav.css'
+
+
 const Nav = ({user}) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const navigate = useNavigate()

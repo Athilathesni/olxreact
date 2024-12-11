@@ -51,7 +51,6 @@ const ViewPost = () => {
 
   return (
     <div className="view-post-container">
-      <h2>Post Details</h2>
       <div className="post-details">
         <div className="post-images">
           {post.images.map((image, index) => (
@@ -78,7 +77,7 @@ const ViewPost = () => {
       </div>
       <div className="post-actions">
         <button onClick={() => navigate(`/editPost/${id}`)}>Edit</button>
-        <button onClick={deletePost}>Delete</button>
+        <button className="db" onClick={deletePost}>Delete</button>
       </div>
     </div>
   );

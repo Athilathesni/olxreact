@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
   }
@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', Arial, sans-serif;
-    /* background: linear-gradient(135deg, #29b7ff, #414345); */
+    
     color: white;
     min-height: 100vh;
     transform: translatey(-20px);
@@ -92,10 +92,10 @@
   .post-caption:hover {
     background: linear-gradient(135deg, #f6d365, #fda085);
     color: white;
-  }
+  } */
   
   /* Add smooth grid transition effect */
-  .post-grid {
+  /* .post-grid {
     animation: fadeIn 0.5s ease-in-out;
   }
   
@@ -109,9 +109,9 @@
       transform: translateY(0);
     }
   }
-  
+   */
   /* Link styling */
-  a {
+  /* a {
     text-decoration: none;
     color: inherit;
   }
@@ -119,7 +119,7 @@
   a:hover {
     color: inherit;
     cursor: pointer;
-  }
+  } */
   
   
   

@@ -112,7 +112,7 @@ const Profile = () => {
       </div>
       <div className="right-side">
         <Link to={"/sell"} className="sell-btn">
-          <button>Sell</button>
+          <button className="sell">Sell</button>
         </Link>
         {posts.length === 0 ? (
           <div>No post added</div>

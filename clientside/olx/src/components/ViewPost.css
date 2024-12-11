@@ -1,5 +1,5 @@
 .view-post-container {
-    width: 80%;
+   width: 200px;
     margin: 50px auto;
     padding: 20px;
     background: #fff;
@@ -14,7 +14,7 @@
   }
   
   .post-image {
-    width: 100%;
+    width: 100px;
     max-width: 500px;
     height: auto;
     border-radius: 8px;
@@ -42,8 +42,14 @@
     font-size: 1rem;
     transition: background-color 0.3s ease;
   }
-  
-  button:hover {
-    background: #0056b3;
+  .db{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #a50a2b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
   }
   
