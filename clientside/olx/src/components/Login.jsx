@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css"
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"
 import axios from 'axios'
 
 const Login = () => {
@@ -33,6 +33,7 @@ const Login = () => {
       console.log(error)
     }
   }
+
 
   return (
     <div className="login-page">
@@ -75,7 +76,6 @@ const Login = () => {
         <Link to={"/#"} className="forgot-password-link">
           Forgot Password?
         </Link>
-        {/* <span className="separator">|</span> */}
       </div>
     </div>
     <div className="und">
