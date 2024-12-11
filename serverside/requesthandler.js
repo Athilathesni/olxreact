@@ -1,5 +1,7 @@
 import userSchema from "./model/user.js"
-import nodemailer from "nodemailer"
+import userDataSchema from "./model/userdata.js"
+import postSchema from "./model/post.js"
+import nodemailer from 'nodemailer'
 
 import bcrypt from "bcrypt"
 import pkg from "jsonwebtoken"
