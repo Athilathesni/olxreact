@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link,useNavigate } from "react-router-dom"
-
+import './Home.css'
 const Home = ({setUser}) => {
   const navigate = useNavigate()
   const [posts, setPosts] = useState([])
@@ -48,20 +48,20 @@ const Home = ({setUser}) => {
 
 
   return (
-    <div className="body-home">
-    <div className="homepage-container">
-      <div className="post-grid">
+    <div className="body">
+    <div className="homepage">
+      <div className="post0">
         {posts.length === 0 ? (
           <div>No posts available</div>
         ) : (
           posts.map((post) => (
             <Link to={`/viewPost/${post._id}`}>
-                <div key={post._id} className="post-card">
+                <div key={post._id} className="posthm">
                     {post.images && post.images.length > 0 && (
               <img
                 src={post.images[0]}
                 alt={post.caption}
-                className="post-image"
+                className="postimage"
               />
             )}
             <div className="post-caption">{post.caption}</div>

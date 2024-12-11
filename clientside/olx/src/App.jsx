@@ -11,6 +11,7 @@ import Edituser from "./components/Edituser"
 import Profile from "./components/Profile"
 import ViewPost from "./components/ViewPost"
 import { useState } from "react"
+import ViewusrPost from "./components/ViewusrPost"
 
 function App() {
   const [user, setUser] = useState("")
@@ -28,6 +29,7 @@ function App() {
     <Route path="/sell" element={<Sell />}></Route>
     <Route path="/viewPost/:id" element={<ViewPost />}></Route>
     <Route path="/editPost/:id" element={<EditPost />}></Route>
+    <Route path="/viewusrpost/:id" element={<ViewusrPost/>}></Route>
     </Routes>
     </BrowserRouter>
   )

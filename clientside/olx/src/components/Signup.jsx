@@ -10,6 +10,7 @@ const Signup = () => {
     email:localStorage.getItem('email') ||"",
     pwd: "",
     cpwd: "",
+    phone:""
   });
 
   const handleChange = (e) => {
@@ -47,7 +48,7 @@ const Signup = () => {
             name="username"
             value={formData.username}
             onChange={handleChange}
-            placeholder="Username or Phone"
+            placeholder="Username"
             required
           />
         </div>

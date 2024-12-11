@@ -3,7 +3,7 @@
 /* Basic Navbar styling */
 .navbar {
     background-color:#e4e6e6; /* OLX brand color */
-    padding: 10px 20px;
+    padding: 10px 10px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -18,6 +18,7 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    height: 70px;
   }
   
   .loca {
@@ -27,7 +28,7 @@
     border:2px solid rgb(12, 12, 12);
     font-size: 16px;
     outline: none;
-    margin-left: -98px;
+    margin-left: -150px;
   }
   img{
     width: 40px;
@@ -44,12 +45,11 @@
   .search-input {
     width: 750px;
     height: 40px;
-    margin-top: 10px;
     border-radius: 2px;
     border:2px solid rgb(10, 10, 10);
     font-size: 16px;
     outline: none;
-    margin-left: -50px;
+    margin-left:10px;
   }
   
   .search-input::placeholder {
@@ -59,7 +59,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    margin-right: -110px;
   }
  .eng{
     width: 100px;
@@ -68,6 +67,7 @@
     background-color:#e4e6e6;
   
  } 
+
  .engs{
     width: 100px;
     height: 30px;
@@ -75,6 +75,8 @@
     background-color: #e4e6e6;
     font-weight: bold;
     font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
  } 
  .lod{
     font-size: 16px;
@@ -86,10 +88,12 @@
  .sell{
     width: 90px;
     height: 40px;
-    border-radius: 100px;
+    border-radius: 10px;
     font-weight: bold;
     text-align: center;
     border: 1px solid rgb(27, 105, 27);
+    background-color: rgb(192, 192, 191);
+
  }
  .plu{
     font-size: 20px;

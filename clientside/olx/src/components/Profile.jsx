@@ -81,7 +81,7 @@ const Profile = () => {
       <div className="left-side">
         <form>
           <div className="form-group">
-            <div className="image">
+            <div className="image1">
               <img src={userData?.pic||""} alt="" />
             </div>
             <div>Username: {userDetails?.username}</div>
@@ -112,7 +112,7 @@ const Profile = () => {
       </div>
       <div className="right-side">
         <Link to={"/sell"} className="sell-btn">
-          <button className="sell">Sell</button>
+          <button className="sell1">Sell</button>
         </Link>
         {posts.length === 0 ? (
           <div>No post added</div>

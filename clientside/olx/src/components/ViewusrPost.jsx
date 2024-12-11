@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import "./ViewPost.css";
-
-const ViewPost = () => {
+const ViewusrPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
@@ -13,35 +11,18 @@ const ViewPost = () => {
     try {
       const res = await axios.get(`http://localhost:4000/api/getPost/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
-      })
+      });
       if (res.status === 200) {
         setPost(res.data.post);
       } else {
         alert("Failed to fetch post data.");
-        navigate("/profile");
+        navigate("/");
       }
     } catch (error) {
       console.error(error);
-      navigate("/profile");
+      navigate("/");
     }
-  };
-
-  const deletePost = async () => {
-    try {
-      const res = await axios.delete(`http://localhost:4000/api/deletePost/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      if (res.status === 200) {
-        alert(res.data.msg);
-        navigate("/profile");
-      } else {
-        alert("Failed to delete post.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred. Try again.");
-    }
-  };
+  }
 
   useEffect(() => {
     fetchPost();
@@ -50,10 +31,10 @@ const ViewPost = () => {
   if (!post) return <div>Loading...</div>;
 
   return (
-    <div className="view-post-container">
-      <div className="post-details">
-        <div className="bac">
-        <div className="post-images">
+    <div className="view-post1-container">
+      <h2>𝓓𝓔𝓣𝓐𝓘𝓛𝓢</h2>
+      <div className="post1-details">
+        <div className="post1-images">
           {post.images.map((image, index) => (
             <img
               key={index}
@@ -62,12 +43,10 @@ const ViewPost = () => {
               className="post-image"
             />
           ))}
-        </div></div>
-        <div className="post-info">
-          <h3>title: {post.title}</h3>
-          <p>category: {post.category}</p>
-          <p>description: {post.description}</p>
-          <p>price: ₹ {post.price}</p>
+        </div>
+        <div className="post1-info">
+          <h3>{post.caption}</h3>
+          <p>{post.description}</p>
           <p>
             <strong>Date:</strong> {post.date}
           </p>
@@ -76,12 +55,8 @@ const ViewPost = () => {
           </p>
         </div>
       </div>
-      <div className="post-actions">
-        <button className="ed" onClick={() => navigate(`/editPost/${id}`)}>Edit</button>
-        <button className="db" onClick={deletePost}>Delete</button>
-      </div>
     </div>
   );
 };
 
-export default ViewPost
+export default ViewusrPost
