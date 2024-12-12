@@ -48,9 +48,9 @@ const Home = ({ setUser, filter }) => {
   }, []);
 
   return (
-    <div className="body">
-      <div className="homepa">
-        <div className="post">
+    <div className="body-home">
+      <div className="homepage-container">
+        <div className="post-grid">
           {posts.length === 0 ? (
             <div>No posts available</div>
           ) : (
@@ -60,17 +60,17 @@ const Home = ({ setUser, filter }) => {
               )
               .map((post) => (
                 <Link to={`/viewPost/${post._id}`}>
-                  <div key={post._id} className="postc">
+                  <div key={post._id} className="post-card">
                     {post.images && post.images.length > 0 && (
                       <img
                         src={post.images[0]}
                         alt={post.caption}
-                        className="postimage"
+                        className="post-image"
                       />
                     )}
-                    <div className="textc">
-                      <div className="pricep"> <b>₹ {post.price}</b></div>
-                      <div className="postt">{post.title}</div>
+                    <div className="text-card">
+                      <div className="postp"> <b>₹ {post.price}</b></div>
+                      <div className="post-title">{post.title}</div>
                     </div>
                   </div>
                 </Link>
@@ -81,5 +81,6 @@ const Home = ({ setUser, filter }) => {
     </div>
   );
 };
+
 
 export default Home;

@@ -86,17 +86,17 @@ const Profile = () => {
             <div className="image1">
               <img src={userData?.pic||""} alt="" />
             </div>
-            <div>Username: {userDetails?.username}</div>
-            <div>Email: {userDetails?.email}</div>
-            <div>Phone: {userDetails?.phone}</div>
+            <div className="d1"><span>Username:</span> {userDetails?.username}</div>
+            <div className="d2"><span>Email:</span> {userDetails?.email}</div>
+            <div className="d3"><span>Phone:</span> {userDetails?.phone}</div>
           </div>
         </form>
         {userData ? (
           <>
             <div>
-              <div>District: {userData.district}</div>
-              <div>Place: {userData.place}</div>
-              <div>Pin: {userData.pin}</div>
+              <div className="d4"> <span>District:</span> {userData.district}</div>
+              <div className="d5"><span>Place:</span> {userData.place}</div>
+              <div className="d6"><span>Pin: </span>{userData.pin}</div>
             </div>
             <Link to={"/edituser"}>
               <button className="edit-btn">Edit</button>
@@ -117,7 +117,7 @@ const Profile = () => {
           <button className="sell1">Sell</button>
         </Link>
         {posts.length === 0 ? (
-          <div>No post added</div>
+          <div className="po">No post added</div>
         ) : (
           <div className="right-post-card">
           {posts.map((post, index) => (
