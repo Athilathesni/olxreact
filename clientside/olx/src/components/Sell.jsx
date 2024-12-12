@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios";
 
 const Sell= () => {
-    const navigate=useNavigate()
+  const navigate=useNavigate()
   const [formData, setFormData] = useState({
     title: "",
     category: "",
@@ -98,5 +98,4 @@ const Sell= () => {
     </form>
   );
 };
-
 export default Sell

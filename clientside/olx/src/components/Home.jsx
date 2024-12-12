@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link,useNavigate } from "react-router-dom"
-import './Home.css'
-const Home = ({setUser}) => {
-  const navigate = useNavigate()
-  const [posts, setPosts] = useState([])
-  const token = localStorage.getItem("token")
+import { Link, useNavigate } from "react-router-dom";
+import "./Home.css";
+
+const Home = ({ setUser, filter }) => {
+  const navigate = useNavigate();
+  const [posts, setPosts] = useState([]);
+  const token = localStorage.getItem("token");
 
   const getUser = async () => {
     if (!token) {
-      navigate("/login")
+      navigate("/login");
     } else {
       try {
         const res = await axios.get("http://localhost:4000/api/getuser", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.status === 200) {
-          setUser(res.data.name)
+          setUser(res.data.name);
           // setPic(res.data.pic)
         } else {
-          navigate("/login")
+          navigate("/login");
         }
       } catch (error) {
-        console.error(error)
-        navigate("/login")
+        console.error(error);
+        navigate("/login");
       }
     }
-  }
+  };
 
   const getPosts = async () => {
     try {
@@ -39,40 +40,46 @@ const Home = ({setUser}) => {
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   useEffect(() => {
-    getUser()
-    getPosts()
-  }, [])
-
+    getUser();
+    getPosts();
+  }, []);
 
   return (
     <div className="body">
-    <div className="homepage">
-      <div className="post0">
-        {posts.length === 0 ? (
-          <div>No posts available</div>
-        ) : (
-          posts.map((post) => (
-            <Link to={`/viewPost/${post._id}`}>
-                <div key={post._id} className="posthm">
+      <div className="homepa">
+        <div className="post">
+          {posts.length === 0 ? (
+            <div>No posts available</div>
+          ) : (
+            posts
+              .filter((i) =>
+                i.category.toLowerCase().includes(filter.toLowerCase())
+              )
+              .map((post) => (
+                <Link to={`/viewPost/${post._id}`}>
+                  <div key={post._id} className="postc">
                     {post.images && post.images.length > 0 && (
-              <img
-                src={post.images[0]}
-                alt={post.caption}
-                className="postimage"
-              />
-            )}
-            <div className="post-caption">{post.caption}</div>
-          </div>
-          </Link>  
-          ))
-        )}
+                      <img
+                        src={post.images[0]}
+                        alt={post.caption}
+                        className="postimage"
+                      />
+                    )}
+                    <div className="textc">
+                      <div className="pricep"> <b>₹ {post.price}</b></div>
+                      <div className="postt">{post.title}</div>
+                    </div>
+                  </div>
+                </Link>
+              ))
+          )}
+        </div>
       </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

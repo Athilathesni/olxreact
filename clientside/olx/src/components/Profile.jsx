@@ -52,7 +52,10 @@ const Profile = () => {
   }, []);
 
   const handleClick = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
+    const confirmDelete = window.confirm("Are you sure you want to delete this post?");
+    if (!confirmDelete) return;
+    
     if (!token) {
       navigate("/login");
     } else {
@@ -74,7 +77,6 @@ const Profile = () => {
       }
     }
   };
-
   return (
     <div className="body-profile">
     <div className="container">
@@ -120,7 +122,7 @@ const Profile = () => {
           <div className="right-post-card">
           {posts.map((post, index) => (
             <div key={index} className="show-post-card">
-              <Link to={`/viewPost/${post._id}`} >
+              <Link to={`/viewuserPost/${post._id}`} >
               <img
                 src={post.images[0]}
                 alt="First Post"
