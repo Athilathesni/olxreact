@@ -80,9 +80,9 @@ const Sell= () => {
       <div>
         <label>Images:</label>
         <input type="file" accept="image/*" multiple onChange={handleImageChange} required />
-        <div className="image-previews">
+        <div className="pre">
           {imagePreviews.map((src, index) => (
-            <img key={index} src={src} alt={`Preview ${index}`} width="100" />
+            <img key={index} src={src} alt={`Preview ${index}`} width="100px" />
           ))}
         </div>
       </div>

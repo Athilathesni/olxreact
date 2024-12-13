@@ -60,14 +60,14 @@
   }
   
   
-  .image-previews {
+  .pre {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 0.5rem;
   }
   
-  .image-previews img {
+  .pre img {
     width: 100px;
     height: 100px;
     object-fit: cover;

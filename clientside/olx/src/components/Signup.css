@@ -83,7 +83,8 @@
     font-size: 12px;
   }
   .le2{
-    color: #0517bb;
+    color: #2838cc;
+    font-size: 12px;
   }
   @media (max-width: 400px) {
     .register-container {

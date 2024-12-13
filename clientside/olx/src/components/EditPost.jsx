@@ -75,7 +75,7 @@ const EditPost = () => {
       
         if (response.status === 201) {
           alert("Product updated successfully!");
-          navigate(`/viewPost/${id}`);
+          navigate(`/`);
         } else {
           alert("Failed to update product!");
         }

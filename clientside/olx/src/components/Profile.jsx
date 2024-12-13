@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./Profile.css";
+import logo from '../assets/homei.png'
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -104,13 +105,17 @@ const Profile = () => {
           </>
         ) : (
           <>
-            <div>Note: Not added, need to create !</div>
+            <div className="not">Note: Not added, need to create !</div>
             <Link to={"/adduser"}>
-              <button className="create-btn">Add more</button>
+              <button className="cre">Add more</button>
             </Link>
           </>
         )}
         <button onClick={handleClick} className="delete-btn">Delete</button>
+      <div>
+       <a href="/"><img src={logo} alt="Logo" className="logo1" /></a>
+      </div>
+       
       </div>
       <div className="right-side">
         <Link to={"/sell"} className="sell-btn">
@@ -119,9 +124,9 @@ const Profile = () => {
         {posts.length === 0 ? (
           <div className="po">No post added</div>
         ) : (
-          <div className="right-post-card">
+          <div className="rightpc">
           {posts.map((post, index) => (
-            <div key={index} className="show-post-card">
+            <div key={index} className="spc">
               <Link to={`/viewuserPost/${post._id}`} >
               <img
                 src={post.images[0]}
@@ -133,6 +138,7 @@ const Profile = () => {
               ))}
               </div>
               )}
+            
       </div>
     </div>
     </div>
