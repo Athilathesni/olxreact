@@ -29,6 +29,12 @@ const ViewPost = () => {
   useEffect(() => {
     fetchPost();
   }, []);
+  const eqbtn=()=>{
+    localStorage.setItem('productId',post._id)
+    localStorage.setItem('price',post.price)
+    localStorage.setItem('sellerId',post.userId)
+    navigate(`/eqpst`)
+  }
 
   if (!post) return <div>Loading...</div>;
 
@@ -62,6 +68,7 @@ const ViewPost = () => {
             <strong>Time:</strong> {post.time}
           </p>
           </div>
+          <button className="enq" onClick={eqbtn}>Enquire</button>
         </div>
       </div>
     </div>

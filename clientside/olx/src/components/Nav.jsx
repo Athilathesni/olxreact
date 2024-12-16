@@ -69,6 +69,7 @@ const Nav = ({user,setFilter}) => {
           {isDropdownVisible && (
             <div className="dropdown-content">
               <a href="/profile">Profile</a>
+              <a href="/eqpage">Enquiries</a>
               <a onClick={handleLogout} style={{ cursor: "pointer" }}>
                 Logout
               </a>

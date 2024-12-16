@@ -12,15 +12,18 @@ import Profile from "./components/Profile"
 import ViewPost from "./components/ViewPost"
 import { useState } from "react"
 import ViewuserPost from "./components/ViewuserPost"
+import Eqpage from "./components/Eqpage"
+import Eqpst from "./components/Eqpst"
 
 function App() {
   const [user, setUser] = useState("")
   const [filter,setFilter]=useState("")
+  const [name,setName]=useState("")
   return(
     <BrowserRouter>
-     {user&& <Nav user={user} setFilter={setFilter}/>}
+     {user&& <Nav user={user} setFilter={setFilter} setName={setName}/>}
     <Routes>
-    <Route path="/" element={<Home setUser={setUser} filter={filter}/>}></Route>
+    <Route path="/" element={<Home setUser={setUser} filter={filter} name={name}/>}></Route>
     <Route path="/login" element={<Login />}></Route>
     <Route path="/signup" element={<Signup />}></Route>
     <Route path="/verify" element={<Verify/>}></Route>
@@ -31,6 +34,8 @@ function App() {
     <Route path="/viewPost/:id" element={<ViewPost />}></Route>
     <Route path="/editPost/:id" element={<EditPost />}></Route>
     <Route path="/viewuserpost/:id" element={<ViewuserPost/>}></Route>
+    <Route path="/eqpage" element={<Eqpage />}></Route>
+    <Route path="/eqpst" element={<Eqpst />}></Route>
     </Routes>
     </BrowserRouter>
   )
