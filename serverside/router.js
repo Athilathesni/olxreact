@@ -17,5 +17,7 @@ router.route('/getAllPosts').get(Auth, rh.getAllPosts)
 router.route('/getPost/:id').get(Auth, rh.getPost)
 router.route('/updatePost/:id').put(Auth,rh.updatePost)
 router.route('/deletePost/:id').delete(Auth, rh.deletePost)
+router.route('/enqPost').post(Auth,rh.enqPost)
+router.route('/enquiries').get(Auth,rh.enquirees)
 
 export default router
